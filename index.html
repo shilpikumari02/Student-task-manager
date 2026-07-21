@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🎓 Student Task Manager</h1>
+        <p class="subtitle">Organize your studies and stay productive.</p>
+
+        <div class="task-form">
+
+            <input 
+                type="text" 
+                id="taskInput" 
+                placeholder="Enter your task..."
+            >
+
+            <select id="categoryInput">
+                <option value="Study">Study</option>
+                <option value="Assignment">Assignment</option>
+                <option value="Project">Project</option>
+                <option value="Personal">Personal</option>
+            </select>
+
+            <input 
+                type="date" 
+                id="dateInput"
+            >
+
+            <button onclick="addTask()">Add Task</button>
+
+        </div>
+
+        <div class="stats">
+
+            <div class="stat-box">
+                <h3 id="totalTasks">0</h3>
+                <p>Total Tasks</p>
+            </div>
+
+            <div class="stat-box">
+                <h3 id="pendingTasks">0</h3>
+                <p>Pending</p>
+            </div>
+
+            <div class="stat-box">
+                <h3 id="completedTasks">0</h3>
+                <p>Completed</p>
+            </div>
+
+        </div>
+
+        <div class="filter-buttons">
+            <button onclick="filterTasks('all')">All</button>
+            <button onclick="filterTasks('pending')">Pending</button>
+            <button onclick="filterTasks('completed')">Completed</button>
+        </div>
+
+        <div id="taskList"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
